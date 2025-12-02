@@ -1,0 +1,74 @@
+/* 檔案: src/components/LyricsSearch.css */
+
+.lyrics-search-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #f7f9fc;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.lyrics-search-container h2 {
+    text-align: center;
+    color: #00bfa5; /* 藍色主題 */
+    margin-bottom: 25px;
+}
+
+.search-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto; /* 兩個輸入框和一個按鈕 */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-controls input {
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.search-controls button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #00bfa5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-controls button:hover:not(:disabled) {
+    background-color: #249687;
+}
+
+.lyrics-error-box {
+    padding: 15px;
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #e57373;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.lyrics-output {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    min-height: 100px;
+}
+
+.lyrics-content h3 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}

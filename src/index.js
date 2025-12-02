@@ -4,6 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AItest from './AItest';
 import ItunesSearch from './ItunesSearch';
+import LyricsSearch from './LyricsSearch';
 
 const el = document.getElementById('react-root');
 
@@ -25,8 +26,15 @@ if (el) {
                 {/* 使用 div 確保內容居中和樣式邊距 */}
                 <hr style={{ margin: '20px 0', borderTop: '2px solid #ccc' }} />
                 <div style={{ maxWidth: '800px', margin: '0 auto', padding: '10px 0' }}>
-                    <h2 style={{ textAlign: 'center' }}>🎵 速速搜尋音樂！</h2>
+                    <h2 style={{ textAlign: 'center' }}>🎵 速速搜尋音樂🎵</h2>
+                    <h3 style={{ textAlign: 'center' }}>一起跟上最流行的Challenge！</h3>
                     <ItunesSearch />
+                </div>
+
+                {/* 🌟 新增 Lyrics 搜尋區塊 */}
+                <hr style={{ margin: '30px 0', borderTop: '2px solid #ccc' }} />
+                <div style={{ maxWidth: '800px', margin: '0 auto', padding: '10px 0' }}>
+                    <LyricsSearch />
                 </div>
                 
                 {/* 確保網頁底部有足夠空間 */}

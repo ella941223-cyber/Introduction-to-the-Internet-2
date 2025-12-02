@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#fixed-center-photo {
+    /* 🌟 核心固定和垂直置中 */
+    position: fixed; 
+    top: 50%; /* 定位到視窗中心 */
+    transform: translateY(-50%); /* 向上移動圖片自身高度的一半，實現完美置中 */
+    
+    /* 設置圖片的水平位置和大小 */
+    left: 5%; /* 根據 offset-lg-5 留出的空間來調整這個數值 */
+    max-width: 300px; /* 限制圖片的最大寬度 */
+    z-index: 1000; 
+}
+
+#fixed-center-photo img {
+    width: 100%;
+    height: auto;
+}
