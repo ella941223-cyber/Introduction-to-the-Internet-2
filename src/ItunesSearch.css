@@ -1,0 +1,140 @@
+/* 檔案: src/components/ItunesSearch.css */
+
+/* 容器樣式 */
+.itunes-search-container {
+    max-width: 800px;
+    margin: 40px auto; /* 居中並增加上下間距 */
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* 輕微陰影提升質感 */
+    font-family: Arial, sans-serif;
+}
+
+.itunes-search-container h2 {
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #0070c9; /* 蘋果藍色線條 */
+    padding-bottom: 10px;
+}
+
+/* 搜尋控制項 */
+.search-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.search-controls input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-controls input:focus {
+    border-color: #0070c9;
+    box-shadow: 0 0 0 3px rgba(0, 112, 201, 0.2); /* 焦點藍色光暈 */
+    outline: none;
+}
+
+.search-controls button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #00bfa5; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 600;
+}
+
+.search-controls button:hover:not(:disabled) {
+    background-color: #02ae97;
+}
+
+.search-controls button:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+/* 結果列表 */
+.itunes-results-list {
+    min-height: 100px; /* 確保結果框有最小高度 */
+}
+
+.results-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px; /* 列表項目之間的間距 */
+}
+
+.result-item {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 5px solid #0070c9; /* 醒目的左邊框 */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.track-name {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 4px;
+}
+
+.artist-album {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+}
+
+.itunes-link {
+    color: #0070c9;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 600;
+    align-self: flex-end; /* 鏈接靠右對齊 */
+}
+
+.itunes-link:hover {
+    text-decoration: underline;
+}
+
+/* 訊息和錯誤提示 */
+.loading-message, .no-results {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+    font-style: italic;
+}
+
+.no-results {
+    color: #e30000;
+    font-weight: 500;
+}
+
+/* 響應式設計 (確保在手機上也能看) */
+@media (max-width: 600px) {
+    .itunes-search-container {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+    .search-controls {
+        flex-direction: column;
+    }
+    .search-controls button {
+        width: 100%;
+    }
+}
